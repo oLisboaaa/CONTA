@@ -4,10 +4,10 @@ import java.util.Scanner;
 
 class Banco {
     // Atributos da classe Banco
-    private double saque;         // Valor do saque
-    private double deposito;      // Valor do depósito
-    private double saldoAtual;    // Saldo atual da conta
-    private int numConsulta;      // Número de consultas realizadas
+    private double saque; // Valor do saque
+    private double deposito; // Valor do depósito
+    private double saldoAtual; // Saldo atual da conta
+    private int numConsulta; // Número de consultas realizadas
 
     // Construtor da classe Banco que inicializa o saldo com um valor inicial
     public Banco(double saldoInicial) {
@@ -20,7 +20,7 @@ class Banco {
         return saque;
     }
 
-   // Método para definir o valor do saque
+    // Método para definir o valor do saque
     public void setSaque(double valor) {
         double taxa = 0.005; // Define a taxa de 0,5%
         saque = valor; // Armazena o valor do saque
@@ -73,7 +73,8 @@ class Banco {
         // Verifica se o número de consultas ultrapassou o limite gratuito
         if (numConsulta % 5 == 0) {
             saldoAtual -= taxa; // Deduz a taxa do saldo
-            System.out.printf("Número de consultas gratuitas excedido. Taxa de R$ 0,10 cobrada. Saldo atual:\n" + saldoAtual);
+            System.out.printf(
+                    "Número de consultas gratuitas excedido. Taxa de R$ 0,10 cobrada. Saldo atual:\n" + saldoAtual);
         }
     }
 
